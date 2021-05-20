@@ -28,7 +28,7 @@ function Header() {
             if(window.innerWidth > 997) {
                 const ham_burger_nav = document.getElementById('list-holder');
                 ham_burger_nav.classList.toggle('ham-burger-nav',false)
-                const icon = document.getElementsByClassName('fa-bars')[0];
+                const icon = document.getElementsByClassName('ham')[0];
                 icon.classList.toggle('close',false);
                 document.getElementsByClassName('separator')[0].classList.toggle('separate', false);
             }
@@ -55,8 +55,7 @@ function Header() {
         ham_burger.addEventListener('click', ()=>{
             const ham_burger_nav = document.getElementById('list-holder');
             ham_burger_nav.classList.toggle('ham-burger-nav')
-            const icon = document.getElementsByClassName('fa-bars')[0];
-            
+            const icon = document.getElementsByClassName('ham')[0];
             icon.classList.toggle('close');
 
             document.getElementsByClassName('separator')[0].classList.toggle('separate');
@@ -85,7 +84,7 @@ function Header() {
                     <div className="bg-active"></div>
                 </ul>
                 <label className = 'ham-burger'>
-                    <i className = 'fa fa-bars' ></i>
+                    <img className = 'ham' src = 'images/hamburger.svg' ></img>
                 </label>
             </nav>
         </header>
