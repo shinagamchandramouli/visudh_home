@@ -1,0 +1,9 @@
+.faqs {
+    width: 70%;
+    margin: 50px auto;
+    padding: 10px;
+}
+
+.faqs .card:hover {
+    transform: scale(1,1);
+}

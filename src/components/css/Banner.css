@@ -1,0 +1,17 @@
+.banner {
+    border: solid black 1px;
+    /* margin-top: 60px; */
+    z-index: -10;
+}
+
+.separator {
+    transition: margin-top 0.7s;
+}
+
+.separate {
+    margin-top: 200px;
+}
+
+/* .banner>.carousel img {
+    height: 400px;
+} */

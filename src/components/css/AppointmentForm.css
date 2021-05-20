@@ -1,0 +1,10 @@
+.appointment-form {
+    /* width: 90%; */
+    margin: 20px auto;
+    padding: 20px 150px;
+    background: #e1f1dd;
+}
+
+.appointment-form> .apmnt-form {
+    padding-top: 30px;
+}

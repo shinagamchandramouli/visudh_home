@@ -1,0 +1,150 @@
+.facilities , .goals {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-us {
+    /* width: 85%; */
+    margin: 100px auto;
+    margin-bottom: 0px;
+    padding: 20px 100px;
+    background-color: rgb(218, 240, 248);
+    clear: both;
+}
+
+.about-us>p {
+    width: 90%;;
+    margin: 20px auto;
+    font-weight: bold;
+
+}
+
+.facilities {
+    padding: 20px;
+    /* border: solid black 1px; */
+}
+
+.goals {
+    padding: 20px;
+    margin-top: 10px;
+    /* border: solid black 1px; */
+}
+
+.facilities>div {
+    /* text-align: center; */
+    border: solid black 1px;
+    margin: 0px 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 33%;
+    /* color: white; */
+    background-color: #f6e6cb;
+    transition: 0.5s;
+}
+
+.goals>div {
+    /* text-align: center; */
+    border: solid black 1px;
+    margin: 0px 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 33%;
+    background-color: #f6e6cb;
+    transition: 0.5s;
+}
+
+.goals>div:hover {
+    /* text-align: center; */
+    transform: scale(1.1,1.1);
+    
+}
+
+.facilities>div:hover {
+    /* text-align: center; */
+    transform: scale(1.1,1.1);
+    
+}
+
+@media only screen and (min-width: 920px) and (max-width: 1125px) {
+    .facilities , .goals {
+        flex-wrap: wrap;
+    }
+
+    .facilities>div , .goals>div {
+        margin: 20px 0px;
+    }
+    
+    .facilities>div {
+        width: 45%;
+    }
+
+    .goals>div {
+        width: 38%;
+    }
+
+    .about-us {
+        padding: 20px 70px;
+    }
+}
+
+@media only screen and (min-width:720px) and (max-width: 920px) {
+    .facilities , .goals {
+        flex-wrap: wrap;
+    }
+
+    .facilities>div , .goals>div {
+        margin: 20px 0px;
+    }
+    
+    .facilities>div {
+        width: 55%;
+    }
+
+    .goals>div {
+        width: 55%;
+    }
+
+    .about-us {
+        padding: 20px 60px;
+    }
+}
+
+@media (min-width:600px) and (max-width:720px) {
+    .facilities , .goals {
+        flex-wrap: wrap;
+    }
+
+    .facilities>div , .goals>div {
+        margin: 20px 0px;
+    }
+    
+    .facilities>div {
+        width: 70%;
+    }
+
+    .goals>div {
+        width: 65%;
+    }
+}
+
+@media (max-width:600px) {
+    .facilities , .goals {
+        flex-wrap: wrap;
+    }
+
+    .facilities>div , .goals>div {
+        margin: 20px 0px;
+    }
+    
+    .facilities>div {
+        width: 95%;
+    }
+
+    .goals>div {
+        width: 85%;
+    }
+
+    .about-us {
+        padding: 20px 30px;
+    }
+}

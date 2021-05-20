@@ -1,0 +1,40 @@
+.services {
+    /* border: solid black 1px; */
+    margin-top: 60px;
+    padding: 20px 100px;
+}
+
+.services>.cards-holder {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px 0px;
+    width: 100%;
+    /* background-color: rgb(218, 240, 248); */
+}
+
+
+.services>.cards-holder>.card {
+    margin: 20px 50px;
+}
+
+@media only screen and (min-width: 850px) and (max-width:1020px) {
+    .services>.cards-holder>.card {
+        width: 14rem;
+        margin: 20px 10px;
+    }
+}
+
+@media only screen and (min-width:520px) and (max-width:850px) {
+    .services>.cards-holder>.card {
+        width: 13rem;
+        margin: 20px 10px;
+    }
+}
+
+@media only screen  and (max-width:520px) {
+    .services>.cards-holder>.card {
+        width: 14rem;
+        margin: 20px 10px;
+    }
+}
