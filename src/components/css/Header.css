@@ -70,6 +70,7 @@ nav li.active {
 .fa-bars:before {
     content: "\f0c9";
     font-size: 18px;
+    color: white;
     /* color: white; */
 }
 
@@ -115,9 +116,9 @@ nav li.active {
         top: 60px;
     }
 
-    .close:before {
+    /* .close:before {
         content: "\f00d";
-    }
+    } */
 }
 
 @media only screen and (min-width: 697px) and (max-width: 992px) {
@@ -126,6 +127,7 @@ nav li.active {
     }
 
     .fa-bars:before {
+        
         font-size: 18px;
     }
 }
