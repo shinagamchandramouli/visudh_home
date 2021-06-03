@@ -1,59 +1,9 @@
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-body {
-    font-family: "Open Sans", sans-serif;
-    color: #444444;
-  }
-  
-  a {
-    color: #47b2e4;
-  }
-  
-  a:hover {
-    color: #73c5eb;
-    text-decoration: none;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: "Jost", sans-serif;
-  }
-  
-  
-  /*--------------------------------------------------------------
-  # Back to top button
-  --------------------------------------------------------------*/
-  .back-to-top {
-    position: fixed;
-    display: none;
-    right: 15px;
-    bottom: 15px;
-    z-index: 99999;
-  }
-  
-  .back-to-top i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    background: #47b2e4;
-    color: #fff;
-    transition: all 0.4s;
-  }
-  
-  .back-to-top i:hover {
-    background: #209dd8;
-    color: #fff;
-  }
   
   /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
-  #header {
+  /* #header {
     z-index: 997;
     transition: all 0.5s;
     padding: 22px 0;
@@ -93,12 +43,12 @@ body {
       font-size: 28px;
     }
   }
-  
+   */
   /*--------------------------------------------------------------
   # Navigation Menu
   --------------------------------------------------------------*/
   /* Desktop Navigation */
-  .fixed-top{
+  /* .fixed-top{
     background-color: #d4f7fc;
   }
   
@@ -217,10 +167,23 @@ body {
     .nav-menu .drop-down .drop-down > a:after {
       content: "\ea9d";
     }
-  }
+  } */
+
+  /* Get Startet Button */
+.appointment-btn {
+  margin-left: 25px;
+  background: #1977cc;
+  color: #fff;
+  border-radius: 50px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+}
   
   /* Mobile Navigation */
-  .mobile-nav-toggle {
+  /* .mobile-nav-toggle {
     position: fixed;
     right: 15px;
     top: 15px;
@@ -343,12 +306,162 @@ body {
   
   .mobile-nav-active .mobile-nav-toggle i {
     color: #fff;
-  }
+  } */
 
   /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+/*-----------------Header CSS------------------*/
 
+/*Desktop View*/
+.header {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+  background: rgb(255, 255, 255);
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px ;
+}
+.logo-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container h1{
+  margin-left: 20px;
+}
+
+.nav-options {
+  padding-left: 25px;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 50px;
+  margin-left: 30px;
+  margin-top: 20px;
+  list-style-type: none;
+}
+.mobile-option {
+  display: none;
+}
+
+.option :hover {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.signin-up {
+  display: flex;
+  padding: 0px 5px;
+  list-style-type: none;
+  margin: 0px;
+}
+.sign-in {
+  padding-right: 50px;
+  align-self: center;
+  margin: 0px;
+}
+.sign-in :hover {
+  color: rgb(0, 0, 0);
+}
+.signin-btn {
+  padding: 10px 10px;
+  height: 2.4rem;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  align-items: center;
+}
+
+.signup-btn {
+  padding: 10px 10px;
+  height: 2.4rem;
+  border-radius: 10px;
+  background: rgb(9, 102, 241);
+  color: white;
+  cursor: pointer;
+  align-items: center;
+}
+.mobile-menu {
+  display: none;
+}
+@media (max-width: 1200px) {
+  /*Mobile View */
+  .header {
+    padding: 0px 10px;
+  }
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+  .nav-options {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    height: 380px;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    list-style-type: none;
+    grid-gap: 0px;
+  }
+
+  .nav-options.active {
+    background: #31c1da;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    align-content: center;
+    padding-left: 0px;
+  }
+
+  .menu-icon {
+    width: 45px;
+    height: 45px;
+  }
+  .option {
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+    padding: 0px 0px;
+  }
+  .option-color:hover{
+    color: #fff;
+  }
+
+  .sign-up {
+    border-radius: 3px;
+    color: rgb(0, 0, 0);
+    align-self: center;
+    border-radius: 3px;
+  }
+  .sign-up:hover{
+    color: rgb(255, 255, 255);
+  }
+  .signin-up {
+    display: none;
+  }
+
+}
+.mobile-menu {
+  display: block;
+  
+}
 
   /*--------------------------------------------------------------
 # Footer

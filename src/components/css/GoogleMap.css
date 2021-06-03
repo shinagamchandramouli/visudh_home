@@ -1,0 +1,61 @@
+.google-map {
+    position: relative;
+    /* border: solid black 2px; */
+    height: 30rem;
+}
+
+.contact {
+    margin: 50px 30px;
+}
+
+.contact .info i {
+    font-size: 20px;
+    color: #1977cc;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #d6e9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact .info i:hover {
+    background-color: #1977cc ;
+    color:white ;
+}
+
+.contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #2c4964;
+}
+
+.contact .info p {
+    padding: 0 0 0 20px;
+    /* margin-bottom: 0; */
+    font-size: 14px;
+    color: #4b7dab;
+}
+
+.contact .info .email {
+    margin-top: 35px;
+}
+
+.contact .info .phone {
+    margin-top: 35px;
+}
+
+.contact button {
+    background: #1977cc;
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px
+}
+

@@ -1,0 +1,172 @@
+/* Testinal Card design */
+
+/* .testimonal-card {
+    width: 30%;
+} */
+
+.testimonal-card .member {
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 2px;
+    background-color: azure;
+}
+
+.testimonal-card .pic {
+    width: 9rem;
+    border-radius: 50%;
+    border: solid black 1px;
+    overflow: hidden;
+}
+
+.testimonal-card .social {
+    color: black;
+}
+
+.testimonal-card h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.testimonal-card span,p {
+    display: flex;
+    align-items: center;
+}
+
+.testimonal-card span>i,p>i {
+    color: red;
+    font-size: 0.5rem;
+    margin-right: 5px;
+}
+
+.testimonal-card .social i{
+    color: black;
+    margin-right: 6px;
+    font-size: 1.4rem;
+}
+
+/*  Testimonal Slider */
+
+.testimonal-slider {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.testimonal-holder {
+    width: 100%;
+}
+
+.testimonal-left, .testimonal-right, .testimonal-center {
+    position: relative;
+    transition-property: all;
+    transition-delay: 0.8s;
+}
+
+.testimonal-hidden-left {
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.8s;
+}
+
+.testimonal-hidden-right {
+    position: absolute;
+    /* right: 0;
+    transform: translateX(100%); */
+    transform: all 0.8s;
+}
+
+@media only screen and (min-width: 992px){
+    .testimonal-left, .testimonal-right {
+        opacity: 0.7;
+        transform: scale(0.9,0.9);
+    }
+
+
+
+    @keyframes slide_left_main {
+    
+        0% {
+            transform: translateX(0);
+            transform: scale(1,1);
+            opacity: 1;
+        }
+    
+        100% {
+            transform: translate(-100%);
+            transform: scale(.9,.9);
+            opacity: 0.7;
+        }
+        
+    }
+    
+    @keyframes slide_left {
+    
+        0% {
+            transform: translateX(0);
+            transform: scale(.9,.9);
+            opacity: 0.7;
+        }
+    
+        100% {
+            transform: translate(-100%);
+            transform: scale(1,1);
+            opacity: 1;
+            
+        }
+        
+    }
+    
+    @keyframes slide_center_toRight {
+    
+        0% {
+            transform: translateX(0) scale(1,1);
+        }
+    
+        100% {
+            transform: translate(100%) scale(0.9,0.9);
+        }
+        
+    }
+
+    @keyframes slide_right_toRight {
+        0% {
+            transform: translateX(0) scale(0.9,0.9);
+        }
+    
+        100% {
+            transform: translate(100%) scale(0.9,0.9);
+        }
+    }
+
+    @keyframes slide_left_toRight {
+        0% {
+            transform: translateX(0) scale(0.9,0.9);
+        }
+    
+        100% {
+            transform: translate(100%) scale(1,1);
+        }
+        
+    }
+
+    @keyframes slide_hiddenleft_toRight {
+        0% {
+            transform: translateX(-100%) scale(0.9,0.9);
+        }
+    
+        100% {
+            transform: translate(0%) scale(0.9,0.9);
+        }
+    }
+}
+
+/* swiper */
+
+.swiper-container {
+    /* overflow: visible; */
+    padding: 40px 20px;
+    margin-top: 0px;
+}

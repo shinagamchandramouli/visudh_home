@@ -1,0 +1,11 @@
+/*--------------------------------------------------------------
+# Carousel
+--------------------------------------------------------------*/
+.carousel-bg{
+    background-image: linear-gradient(white, rgb(158, 197, 248));
+  }
+  
+  .carousel .slide img {
+    max-height: 450px;
+    max-width: 850px;/* change this to whatever you want */
+  }
