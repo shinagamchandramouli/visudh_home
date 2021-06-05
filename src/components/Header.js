@@ -31,11 +31,15 @@
 
 // export default Header;
 
-import React, { useState } from "react";
+import React from "react";
 import { ReactComponent as CloseMenu } from "./assets/x.svg";
 import { ReactComponent as MenuIcon } from "./assets/menu.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
 import './css/Header_Footer.css'
+
+import { useHistory } from "react-router";
+import { useEffect, useState } from 'react';
+import jwt_decode from 'jwt-decode';
 
 const Header = () => {
   const [click, setClick] = useState(false);
@@ -44,6 +48,30 @@ const Header = () => {
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const history = useHistory();
+
+  useEffect (()=>{
+    const token = localStorage.getItem('jwt');
+    if(token && jwt_decode(token).email) {
+      // console.log(jwt_decode(token).email)
+        setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  },[])
+
+
+  const handleLoginStatus = ()=> {
+    if(isLoggedIn) {
+      localStorage.removeItem('jwt');
+      setIsLoggedIn ( prevAuth => !prevAuth);
+    }
+    else {
+      history.push('/login');
+    }
+  }
   
   return (
     <div className="header">
@@ -130,7 +158,8 @@ const Header = () => {
       </div>
       <ul className="signin-up">
         <li className="sign-in" onClick={closeMobileMenu}>
-          <a href="#" className="signin-btn">SIGN-IN</a>
+          <a className="signin-btn" 
+            onClick = {handleLoginStatus}>{isLoggedIn ? 'Logout' : 'SIGN-IN'}</a>
         </li>
         <li onClick={closeMobileMenu}>
           <a href="" className="signup-btn">

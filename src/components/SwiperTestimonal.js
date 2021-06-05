@@ -116,8 +116,8 @@ function SwiperTestimonal() {
                       "spaceBetween": 40
                     }
                   }}
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
+                // onSwiper={(swiper) => console.log(swiper)}
+                // onSlideChange={() => console.log('slide change')}
             >
                 {
                     doctor_data.map((data)=><SwiperSlide>{<TestimonalCard data = {data} />}</SwiperSlide>)
