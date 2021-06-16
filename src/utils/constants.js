@@ -16,6 +16,11 @@ export const links = [
     text: 'products',
     url: '/products',
   },
+  {
+    id: 4,
+    text: 'offers',
+    url: '/offers',
+  }
 ]
 
 export const services = [
@@ -40,6 +45,15 @@ export const services = [
     text:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
   },
+]
+
+export const categories = [
+  {id: 1, title: 'pharmacy' },
+  {id: 2, title: 'lab tests' },
+  {id: 3, title: 'baby needs' },
+  {id: 4, title: 'personal care' },
+  {id: 5, title: 'health & neutrients' },
+  {id: 6, title: 'vitamins & supplements'}
 ]
 
 export const products_url = 'https://course-api.com/react-store-products'

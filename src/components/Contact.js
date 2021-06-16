@@ -33,7 +33,7 @@ const Contact = () => {
   )
 }
 const Wrapper = styled.section`
-  padding: 5rem 0;
+  padding-bottom: 5rem;
   h3 {
     text-transform: none;
   }
@@ -93,7 +93,7 @@ const Wrapper = styled.section`
     }
   }
   @media (min-width: 1280px) {
-    padding: 15rem 0;
+    /* padding: 15rem 0; */
   }
 `
 

@@ -1,11 +1,16 @@
 import React from 'react'
-import { FeaturedProducts, Hero, Services, Contact } from '../components'
+import { FeaturedProducts, Hero, Categories, Contact, PharmacyProducts } from '../components'
+
 const HomePage = () => {
   return (
     <main>
       <Hero />
+      {/* <Categories /> */}
       <FeaturedProducts />
-      <Services />
+      <PharmacyProducts title = 'Lab Test'/>
+      <PharmacyProducts title = 'Pharmacy'/>
+      <PharmacyProducts title = 'Beauty Care'/>
+      <PharmacyProducts title = 'Baby Needs'/>
       <Contact />
     </main>
   )
