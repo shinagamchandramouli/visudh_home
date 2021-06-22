@@ -17,6 +17,12 @@ app.use(fileUpload({
 app.use('/show', express.static('product_images'));
 app.use('/products', require('./routes/productRoutes.js'));
 
+app.get('/', (req,res)=> {
+    res.status(200).json({
+        msg: "Deployed sucessfully"
+    })
+})
+
 
 // Database connection
 
