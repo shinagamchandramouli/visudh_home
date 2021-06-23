@@ -51,7 +51,7 @@ const SingleProductPage = () => {
     stock,
     stars,
     reviews,
-    id: sku,
+    _id: sku,
     company,
     images,
   } = product

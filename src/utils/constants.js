@@ -58,7 +58,7 @@ export const categories = [
 
 export const products_url = 'https://products-api-visudh.herokuapp.com/products/get_products'
 
-export const single_product_url = `https://products-api-visudh.herokuapp.com/products/get_product:`
+export const single_product_url = `https://products-api-visudh.herokuapp.com/products/get_product/`
 
 // baseURl for API: https://products-api-visudh.herokuapp.com/
 
