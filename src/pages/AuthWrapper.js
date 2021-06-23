@@ -12,6 +12,7 @@ const AuthWrapper = ({ children }) => {
       </Wrapper>
     )
   }
+
   if (error) {
     return (
       <Wrapper>
@@ -19,7 +20,7 @@ const AuthWrapper = ({ children }) => {
       </Wrapper>
     )
   }
-  return <>{children}</>
+  return <React.Fragment>{children}</React.Fragment>
 }
 
 const Wrapper = styled.section`

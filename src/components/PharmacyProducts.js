@@ -10,7 +10,7 @@ const PharmacyProducts = ({title}) => {
   const {
     products_loading: loading,
     products_error: error,
-    featured_products: featured,
+    products: featured,
   } = useProductsContext()
   if (loading) {
     return <Loading />

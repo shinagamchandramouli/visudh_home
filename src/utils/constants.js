@@ -56,6 +56,10 @@ export const categories = [
   {id: 6, title: 'vitamins & supplements'}
 ]
 
-export const products_url = 'https://course-api.com/react-store-products'
+export const products_url = 'https://products-api-visudh.herokuapp.com/products/get_products'
 
 export const single_product_url = `https://course-api.com/react-store-single-product?id=`
+
+// baseURl for API: https://products-api-visudh.herokuapp.com/
+
+// https://course-api.com/react-store-products
