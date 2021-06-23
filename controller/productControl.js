@@ -68,6 +68,23 @@ const productControl = {
 
     get_product: async (req,res) => {
 
+        try{
+            const _id = req.params.id;
+            const product = await PRODUCT.findOne({_id});
+
+            if(!product) return res.status(400).json({
+                msg: 'invalid id'
+            })
+
+            return res.status(200).json({
+                product
+            })
+
+        } catch(err) {
+            return res.status(500).json({
+                error: err
+            })
+        }
     },
 
     get_products: async (req,res) => {
