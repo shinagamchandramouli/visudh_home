@@ -1,49 +1,33 @@
 const PRODUCT  = require('../models/productModel.js');
 const path = require('path');
-const {v4: uuid} = require('uuid')
-const AWS =  require('aws-sdk')
+const uploadImagesToAws = require('../utils/helper.js')
 
-require('dotenv').config();
 
-const s3 = new AWS.S3({
-    accessKeyId: process.env.AWS_ACESS_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACESS_KEY,
-})
 
 const productControl = {
 
     upload_product: async (req,res) => {
         try{
             const {name,category,price,company,shipping,description,stock,stars,reviews, keywords} = req.body;
-            const title = uuid();
-            const file = req.files.image;
+            let files = req.files.images;
 
-            const params = {
-                Bucket: process.env.AWS_BUCKET_NAME,
-                Key: `${title}.${file.mimetype.split('/')[1]}`,
-                Body: file.data,
-                ContentType: file.mimetype
+            if(!files.length) {
+                files = [files];
             }
 
-            let image =  await new Promise ((resolve,reject)=>{
-                    s3.upload(params, (err,data)=> {
-                        if(err)  reject(err ? err : 'upload unsuccessful');
-                        resolve(data.Location);
-                    })
+            let images = await uploadImagesToAws(files);
+            
+            if(images.length !== files.length){
+                return res.status(400).json({
+                    msg: 'uploading went wrong'
                 })
-
-
-            if(!image) res.status(500).json({
-                msg: 'upload unsucessful'
-            })
-
-            console.log(image);
+            }
 
             const new_product = new PRODUCT({
-                name,price,image,company,price,description,category,stars,reviews,shipping,stock,keywords
+                name,price,images,company,price,description,category,stars,reviews,shipping,stock,keywords
             })
 
-            console.log(new_product);
+            // console.log(new_product);
 
             const saved_product = await new_product.save();
 
@@ -57,7 +41,7 @@ const productControl = {
 
         } catch(err) {
             res.status(500).json({
-                error: err
+                error: err ?  err  : 'something wrong man'
             })
         }
     },

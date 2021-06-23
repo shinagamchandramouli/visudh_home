@@ -2,15 +2,15 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
-const fileUpload = require('express-fileupload');
+// const fileUpload = require('express-fileupload');
 
 // configurations
 require('dotenv').config();
 app.use(cors());
 app.use(express.json());
-app.use(fileUpload({
-    debug : true
-}));
+// app.use(fileUpload({
+//     debug : true
+// }));
 
 
 // Routing
