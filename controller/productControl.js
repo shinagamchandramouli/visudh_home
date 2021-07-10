@@ -46,9 +46,9 @@ const productControl = {
         }
     },
 
-    upload_products: async (req,res) => {
+    // upload_products: async (req,res) => {
 
-    },
+    // },
 
     get_product: async (req,res) => {
 
@@ -85,7 +85,29 @@ const productControl = {
                 error: err
             })
         }
+    },
 
+    delete_product: async (req,res)=> {
+        try {
+
+            const ids = req.body.ids;
+
+            for(let i=0; i<ids.length ; i++) {
+                const res = await PRODUCT.findByIdAndDelete({
+                    _id : ids[i]
+                })
+                console.log(res);
+            }
+
+            res.status(200).json({
+                msg: 'all deleted'
+            })
+            
+        } catch (err) {
+            return res.status(500).json({
+                error: err
+            })
+        }
     }
 }
 

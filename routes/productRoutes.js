@@ -11,5 +11,7 @@ Router.post('/upload_product',fileUpload({debug : true}),productControl.upload_p
 Router.get('/get_products',productControl.get_products);
 Router.get(`/get_product/:id`,productControl.get_product);
 
+Router.post('/delete_product',productControl.delete_product)
+
 
 module.exports = Router;
