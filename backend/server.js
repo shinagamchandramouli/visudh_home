@@ -12,7 +12,7 @@ app.use(cors());
 app.use('/user', require('./routes/userRoutes'));
 app.post('/', (req,res) => {
     res.send("hello");
-} )
+})
 
 // Database connection
 const atlas_uri = process.env.ATLAS_URI;
