@@ -16,6 +16,7 @@ app.use(express.json());
 // Routing
 app.use('/show', express.static('product_images'));
 app.use('/products', require('./routes/productRoutes.js'));
+app.use('/user', require('./routes/userRoutes'));
 
 app.get('/', (req,res)=> {
     res.status(200).json({
