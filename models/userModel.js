@@ -33,7 +33,6 @@ const userSchema = new Schema({
   aadhar_no : {
     type: Number,
     required: true,
-    unique: true,
     trim: true,
     // minlenght: 10
   },
