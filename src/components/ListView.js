@@ -6,10 +6,10 @@ const ListView = ({ products }) => {
   return (
     <Wrapper>
       {products.map((product) => {
-        const { id, image, name, price, description } = product
+        const { _id:id, images, name, price, description } = product
         return (
           <article key={id}>
-            <img src={image} alt={name} />
+            <img src={images[0]} alt={name} />
             <div>
               <h4>{name}</h4>
               <h5 className='price'>{formatPrice(price)}</h5>
@@ -32,8 +32,8 @@ const Wrapper = styled.section`
   img {
     width: 100%;
     display: block;
-    width: 300px;
-    height: 200px;
+    width: 225px;
+    height: 150px;
     object-fit: cover;
     border-radius: var(--radius);
     margin-bottom: 1rem;
@@ -50,17 +50,17 @@ const Wrapper = styled.section`
     margin-bottom: 1rem;
   }
   .btn {
-    font-size: 0.5rem;
+    font-size: 1rem;
     padding: 0.25rem 0.5rem;
   }
-  @media (min-width: 992px) {
+  /* @media (min-width: 567px) { */
     article {
       display: grid;
       grid-template-columns: auto 1fr;
-      column-gap: 2rem;
+      column-gap: 4rem;
       align-items: center;
     }
-  }
+  /* } */
 `
 
 export default ListView

@@ -12,6 +12,7 @@ import {
   Products,
   PrivateRoute,
   AuthWrapper,
+  LoginPage,
 } from './pages'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Router>
         <Navbar />
         <Sidebar />
+        <LoginPage />
         <Switch>
           <Route exact path='/'>
             <Home />

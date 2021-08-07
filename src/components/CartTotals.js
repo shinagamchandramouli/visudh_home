@@ -7,7 +7,14 @@ import { Link } from 'react-router-dom'
 
 const CartTotals = () => {
   const { total_amount, shipping_fee } = useCartContext()
-  const { myUser, loginWithRedirect } = useUserContext()
+  const { myUser, setloginFormVisible} = useUserContext()
+
+  const handleLogin = () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    setTimeout(() => {
+      setloginFormVisible(true);
+    }, 500);
+  }
 
   return (
     <Wrapper>
@@ -30,7 +37,7 @@ const CartTotals = () => {
             proceed to checkout
           </Link>
         ) : (
-          <button type='button' className='btn' onClick={loginWithRedirect}>
+          <button type='button' className='btn' onClick={handleLogin}>
             login
           </button>
         )}
