@@ -9,7 +9,7 @@ const userControl = {
     register: async (req,res) => {
         try {
             
-            const {name,email,password,contact_no} = req.body;
+            const {name,email,password,contact_no,aadhar_no, category} = req.body;
 
             const doUserExist = await User.findOne({email});
             const doContactExist = await User.findOne({contact_no});
