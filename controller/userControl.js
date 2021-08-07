@@ -13,15 +13,11 @@ const userControl = {
 
             const doUserExist = await User.findOne({email});
             const doContactExist = await User.findOne({contact_no});
-            const doAadharExist = await User.findOne({aadhar_no});
             if( doUserExist ) {
                 return res.status(409).json({msg: 'Email already exists'});
             }
             else if( doContactExist ) {
                 return res.status(409).json({msg: 'Phone No: already exists'});
-            }
-            else if( doAadharExist ) {
-                return res.status(409).json({msg: 'Aadhar No: already exists'});
             }
 
             const hashPassword = await bcrypt.hash(password, 10);
@@ -59,7 +55,7 @@ const userControl = {
             const userData = await (validator.isEmail(email) ? User.findOne({email}) : User.findOne({contact: email}) );
 
             if(!userData) {
-                res.status(200).json({msg: "Email doesn't exist"});
+                res.status(401).json({msg: "Email doesn't exist"});
             }
 
             const isPasswordMatched = await bcrypt.compare(password, userData.password );
