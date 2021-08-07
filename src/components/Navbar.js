@@ -15,7 +15,7 @@ const Nav = () => {
       <div className='nav-center'>
         <div className='nav-header'>
         <Link to="/">
-        <h1><span style={{color:"#205BE5"}}>Visudh</span><span style={{color:"#FD3535"}}>Ajivam</span></h1>
+        <h1><span style={{color:"#205BE5"}}>Med</span><span style={{color:"#FD3535"}}>Care</span></h1>
         </Link>
           <button type='button' className='nav-toggle' onClick={openSidebar}>
             <FaBars />
